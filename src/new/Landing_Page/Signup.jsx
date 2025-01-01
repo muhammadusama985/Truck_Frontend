@@ -92,7 +92,7 @@ const Signup = () => {
       {/* Left Section */}
       <div style={{ flex: 1, backgroundColor: '#f4f4f4' }}>
         <img
-          src="https://via.placeholder.com/500x700"
+          src="https://images.pexels.com/photos/29567207/pexels-photo-29567207/free-photo-of-vintage-chevrolet-truck-on-recife-street.jpeg?auto=compress&cs=tinysrgb&w=6001"
           alt="Truck Background"
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
