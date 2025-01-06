@@ -329,8 +329,6 @@ const Signup = () => {
               <option value="User">User </option>
               <option value="Driver">Driver</option>
               <option value="Dispatcher">Dispatcher</option>
-              <option value="Accounts">Accounts</option>
-              <option value="Admin">Admin</option>
             </select>
           </div>
 
