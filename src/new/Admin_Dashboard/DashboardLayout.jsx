@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 import styles from './DashboardLayout.module.css';
 import DashboardHome from '../Admin_Dashboard/screens/DashboardHome';
-import { 
-  FaTachometerAlt, FaUser, FaChartBar, FaCog, FaSignOutAlt, FaInbox, 
-  FaClipboard, FaDatabase, FaFileInvoiceDollar 
+import {
+  FaTachometerAlt, FaUser, FaChartBar, FaCog, FaSignOutAlt, FaInbox,
+  FaClipboard, FaDatabase, FaFileInvoiceDollar
 } from 'react-icons/fa';
 import ManageLoads from './screens/Load_Manage/Load_Manage';
 import UserAddLoads from './screens/UserAddOrder/UserAddOrder';
@@ -17,6 +17,7 @@ import DriverLoads from './screens/Driver_Given_Loads/DriverLoads';
 import DriverCompletedLoads from './screens/Driver_Given_Loads/DriverCompletedLoads';
 import Accounts from './screens/Accounts/Accounts';
 import ChatPage from './screens/chat/ChatPage';
+import UnverifiedUsers from './screens/UnverifiedUsers/UnverifiedUsers';
 
 export default function DashboardLayout() {
   const navigate = useNavigate(); // Initialize the navigate function
@@ -41,7 +42,7 @@ export default function DashboardLayout() {
     };
   }, [navigate]);
 
-  
+
 
 
   const handleLogout = () => {
@@ -73,6 +74,8 @@ export default function DashboardLayout() {
         return <DispatcherShowLoads />;
       case 'BillingPayments':
         return <BillingPayments />;
+      case 'UnverfiedUsers':
+        return < UnverifiedUsers />;
       case 'Accounts':
         return <Accounts />;
       case 'ChatPage':
@@ -120,6 +123,7 @@ export default function DashboardLayout() {
       case 'Admin':
         specificButtons = [
           { screen: 'users', label: 'Users', icon: <FaUser /> },
+          { screen: 'UnverifiedUsers', label: 'Unverifeid users', icon: <FaUser /> },
           { screen: 'addLoads', label: 'Add Loads', icon: <FaChartBar /> },
           { screen: 'LoadManage', label: 'Load Manage', icon: <FaDatabase /> },
           { screen: 'MyLoads', label: 'My Orders', icon: <FaDatabase /> },

@@ -4,6 +4,7 @@ import App from './App';
 import DashboardLayout from './new/Admin_Dashboard/DashboardLayout';
 import MyLoads from './new/Admin_Dashboard/screens/My_Loads/MyLoads';
 import DashboardHome from './new/Admin_Dashboard/screens/DashboardHome';
+import UnverifiedUsers from './new/Admin_Dashboard/screens/UnverifiedUsers/UnverifiedUsers';
 
 
 
@@ -11,7 +12,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     < App />
-    {/* < DashboardHome/> */}
   </React.StrictMode>
 );
 
