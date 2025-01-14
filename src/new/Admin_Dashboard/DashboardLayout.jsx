@@ -74,8 +74,8 @@ export default function DashboardLayout() {
         return <DispatcherShowLoads />;
       case 'BillingPayments':
         return <BillingPayments />;
-      case 'UnverfiedUsers':
-        return < UnverifiedUsers />;
+      case 'UnverifiedUsers':
+        return <UnverifiedUsers />;
       case 'Accounts':
         return <Accounts />;
       case 'ChatPage':
