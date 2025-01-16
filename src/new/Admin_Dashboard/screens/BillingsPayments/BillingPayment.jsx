@@ -6,7 +6,7 @@ const BillingPayments = () => {
       {/* Basic Plan */}
       <div style={styles.card}>
         <img
-          src="https://via.placeholder.com/300x150" // Replace with your actual image URL
+          src="./1.jpeg" // Local image for Basic Plan
           alt="Basic Plan"
           style={styles.image}
         />
@@ -24,7 +24,7 @@ const BillingPayments = () => {
       {/* Business Plan */}
       <div style={{ ...styles.card, backgroundColor: "#000", color: "#fff" }}>
         <img
-          src="https://via.placeholder.com/300x150" // Replace with your actual image URL
+          src="./2.jpeg" // Local image for Business Plan
           alt="Business Plan"
           style={styles.image}
         />
@@ -43,7 +43,7 @@ const BillingPayments = () => {
       {/* Enterprise Plan */}
       <div style={styles.card}>
         <img
-          src="https://via.placeholder.com/300x150" // Replace with your actual image URL
+          src="./3.jpeg" // Local image for Enterprise Plan
           alt="Enterprise Plan"
           style={styles.image}
         />
@@ -81,12 +81,15 @@ const styles = {
     textAlign: "center",
   },
   image: {
-    width: "100%",
-    height: "150px",
-    objectFit: "cover",
-    borderRadius: "8px",
-    marginBottom: "15px",
+    width: "100%",         // Make the image take the full width of the container
+    height: "150px",       // Set a fixed height for uniformity
+    objectFit: "full",  // Ensures the image fits completely within the container
+    borderRadius: "8px",   // Adds rounded corners
+    marginBottom: "15px",  // Adds space below the image
+    backgroundColor: "#f0f0f0", // Optional: Background color for empty space
   },
+  
+  
   title: {
     fontSize: "18px",
     fontWeight: "bold",
