@@ -19,7 +19,7 @@ const DashboardContainer = styled(Box)`
   min-height: 100vh;
   padding: 20px;
   font-family: "DM Serif Text", sans-serif;
-  height: 100%;
+  height: 1000px;
 `;
 
 const ServiceCard = styled(Card)`
