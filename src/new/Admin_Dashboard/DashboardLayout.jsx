@@ -117,7 +117,6 @@ export default function DashboardLayout() {
         specificButtons = [
           { screen: 'Accounts', label: 'Accounts', icon: <FaClipboard /> },
           { screen: 'LoadManage', label: 'Load Manage', icon: <FaDatabase /> },
-          { screen: 'Reports', label: 'Reports', icon: <FaClipboard /> },
         ];
         break;
       case 'Admin':
@@ -131,8 +130,6 @@ export default function DashboardLayout() {
           { screen: 'DriverCompletedLoads', label: 'My Completed Loads', icon: <FaDatabase /> },
           { screen: 'DispatcherAssignLoads', label: 'All Loads', icon: <FaDatabase /> },
           { screen: 'Accounts', label: 'Accounts', icon: <FaClipboard /> },
-          { screen: 'Reports', label: 'Reports', icon: <FaClipboard /> },
-          { screen: 'BackupRestore', label: 'Backup/Restore', icon: <FaDatabase /> },
         ];
         break;
       default:
@@ -142,7 +139,6 @@ export default function DashboardLayout() {
     const commonButtons = [
       { screen: 'BillingPayments', label: 'Billing/Payments', icon: <FaFileInvoiceDollar /> },
       { screen: 'ChatPage', label: 'Inbox/Chat', icon: <FaInbox /> },
-      { screen: 'settings', label: 'Settings', icon: <FaCog /> },
     ];
 
     const logoutButton = [

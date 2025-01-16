@@ -11,20 +11,18 @@ const AddUser = () => {
     gender: "Male",
     country: "",
     language: "",
-  
   });
 
   const [BackScreen, setBackScreen] = useState(false); // State to toggle screens
   const [AllUsers, setUsersScreen] = useState(false); // State to toggle screens
-
 
   // Function to handle the button click and move back to User screen
   const handleBackScreenClick = () => {
     setBackScreen(true);
   };
 
-   // Function to handle the button click and show AddNewUser screen
-   const handleAllUsersScreenClick = () => {
+  // Function to handle the button click and show AddNewUser screen
+  const handleAllUsersScreenClick = () => {
     setUsersScreen(true);
   };
 
@@ -68,10 +66,13 @@ const AddUser = () => {
     }
 
     try {
-      const response = await fetch("https://truckbackend-production.up.railway.app/api/add-user", {
-        method: "POST",
-        body: formDataObj,
-      });
+      const response = await fetch(
+        "https://truckbackend-production.up.railway.app/api/add-user",
+        {
+          method: "POST",
+          body: formDataObj,
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
@@ -84,22 +85,17 @@ const AddUser = () => {
       console.error("Error:", error);
     }
   };
-  
-
-
 
   const closeModal = () => {
     setIsModalOpen(false);
   };
-
-  
 
   if (BackScreen) {
     return <UsersGrid />; // If the button is clicked, show AddNewUser screen
   }
 
   if (AllUsers) {
-    return < UsersGrid />; // If the button is clicked, show AddNewUser screen
+    return <UsersGrid />; // If the button is clicked, show AddNewUser screen
   }
 
   return (
@@ -252,9 +248,6 @@ const AddUser = () => {
           </div>
         </div>
 
-
-       
-
         <button type="submit" style={styles.submitButton}>
           Add Now
         </button>
@@ -268,7 +261,10 @@ const AddUser = () => {
               <button onClick={closeModal} style={styles.cancelButton}>
                 Cancel
               </button>
-              <button onClick={handleAllUsersScreenClick} style={styles.seeListButton}>
+              <button
+                onClick={handleAllUsersScreenClick}
+                style={styles.seeListButton}
+              >
                 See List
               </button>
             </div>
@@ -281,30 +277,37 @@ const AddUser = () => {
 
 const styles = {
   container: {
+    fontFamily: "Tinos ,serif",
     width: "900px",
     maxWidth: "1200px",
-    height: "650px",
-    backgroundColor: "#ffffff",
+    height: "680px",
+    backgroundColor: "#BFBFBF",
     padding: "20px",
     margin: "50px auto",
-    borderRadius: "8px",
-    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-    fontFamily: "Arial, sans-serif",
+    borderRadius: "20px",
+    boxShadow: "0 4px 6px rgba(230, 218, 218, 0.1)",
     position: "relative",
+  },
+  html: {
+    backgroundcolor: "" /* Light color for the page background */,
+    margin: " 10",
+    fontfamily: "Arial, sans-serif" /* Optional: Define a global font */,
   },
   backButton: {
     position: "absolute",
     top: "20px",
     left: "20px",
     padding: "5px 10px",
-    fontSize: "14px",
+    fontSize: "15px",
     backgroundColor: "#000",
     color: "#fff",
     border: "none",
-    borderRadius: "4px",
+    borderRadius: "20px",
     cursor: "pointer",
   },
   title: {
+    fontSize: "30px",
+    fontFamily: "Tinos ,serif",
     textAlign: "center",
     marginBottom: "20px",
   },
@@ -330,7 +333,7 @@ const styles = {
   },
   uploadText: {
     margin: 0,
-    fontSize: "12px",
+    fontSize: "16px",
   },
   uploadedImage: {
     width: "100%",
@@ -346,17 +349,22 @@ const styles = {
     flex: 1,
     display: "flex",
     flexDirection: "column",
+    borderRadius: "20px",
   },
   label: {
     fontSize: "14px",
     marginBottom: "5px",
+    width: "50%",
   },
   input: {
+    backgroundColor: "#D9D9D9",
     padding: "8px",
     fontSize: "14px",
-    border: "1px solid #ccc",
-    borderRadius: "4px",
+    border: "2px solid #0D0D0D",
+    borderRadius: "50px",
+    width: "420px,",
   },
+
   checkboxLabel: {
     fontSize: "14px",
     display: "flex",
@@ -366,15 +374,15 @@ const styles = {
     marginRight: "8px",
   },
   submitButton: {
-    width: "70%",
+    width: "50%",
     padding: "10px",
     fontSize: "16px",
     backgroundColor: "#000",
     color: "#fff",
     border: "none",
-    borderRadius: "4px",
+    borderRadius: "20px",
     cursor: "pointer",
-    marginTop:"60px",
+    marginTop: "60px",
     display: "block", // Ensures it behaves like a block element for centering
     margin: "20px auto", // Centers the button horizontally and adds vertical spacing
   },
@@ -391,13 +399,12 @@ const styles = {
   },
   modal: {
     backgroundColor: "#fff",
-    color:"green",
+    color: "green",
     padding: "20px",
     borderRadius: "8px",
     textAlign: "center",
     width: "300px",
     fontSize: "18px", // Increase the font size
-
   },
   modalButtons: {
     marginTop: "20px",
